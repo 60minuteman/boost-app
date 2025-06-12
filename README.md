@@ -1,50 +1,131 @@
-# Welcome to your Expo app 👋
+# Boost App 🚀
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a React Native [Expo](https://expo.dev) project with [Expo Router](https://docs.expo.dev/router/introduction/) for file-based routing, created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+## 📋 Prerequisites
 
-1. Install dependencies
+- Node.js (v18 or higher)
+- Yarn package manager
+- Expo CLI
+- iOS Simulator (for iOS development)
+- Android Studio/Emulator (for Android development)
+
+## 🚀 Get started
+
+1. **Install dependencies**
 
    ```bash
-   npm install
+   yarn install
    ```
 
-2. Start the app
+2. **Start the development server**
 
    ```bash
-   npx expo start
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+3. **Run on specific platforms**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   # iOS
+   yarn ios
+   
+   # Android
+   yarn android
+   
+   # Web
+   yarn web
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📁 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+boost-app/
+├── app/                    # File-based routing directory
+│   ├── (tabs)/            # Tab navigation group
+│   │   ├── _layout.tsx    # Tab layout configuration
+│   │   ├── index.tsx      # Home tab screen
+│   │   └── explore.tsx    # Explore tab screen
+│   ├── _layout.tsx        # Root layout
+│   └── +not-found.tsx     # 404 page
+├── assets/                # Static assets (images, fonts)
+├── components/            # Reusable React components
+├── constants/             # App constants (colors, etc.)
+├── hooks/                 # Custom React hooks
+└── scripts/               # Build and utility scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🧭 Navigation with Expo Router
 
-## Learn more
+This project uses **Expo Router** for navigation, which provides:
 
-To learn more about developing your project with Expo, look at the following resources:
+- **File-based routing**: Routes are automatically generated based on file structure
+- **TypeScript support**: Fully typed navigation
+- **Deep linking**: Built-in support for URL-based navigation
+- **Tab navigation**: Pre-configured bottom tab navigation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Adding new screens
 
-## Join the community
+1. **Create a new screen file** in the `app/` directory:
+   ```typescript
+   // app/profile.tsx
+   import { View, Text } from 'react-native';
+   
+   export default function ProfileScreen() {
+     return (
+       <View>
+         <Text>Profile Screen</Text>
+       </View>
+     );
+   }
+   ```
 
-Join our community of developers creating universal apps.
+2. **Navigation** is automatic - access via `/profile`
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+3. **For tab screens**, add to `app/(tabs)/` directory
+
+### Programmatic navigation
+
+```typescript
+import { router } from 'expo-router';
+
+// Navigate to a screen
+router.push('/profile');
+
+// Navigate with parameters
+router.push('/user/123');
+
+// Go back
+router.back();
+```
+
+## 🛠️ Development
+
+- **Linting**: `yarn lint`
+- **Type checking**: TypeScript is configured with path aliases (`@/` points to root)
+- **Hot reloading**: Enabled by default in development
+
+## 📱 Platform Support
+
+- ✅ iOS
+- ✅ Android  
+- ✅ Web
+- ✅ New Architecture enabled
+
+## 🎨 Styling & Theming
+
+- Dark/Light theme support built-in
+- Platform-specific styling
+- Expo Vector Icons included
+- Haptic feedback components
+
+## 📚 Learn more
+
+- [Expo documentation](https://docs.expo.dev/)
+- [Expo Router documentation](https://docs.expo.dev/router/introduction/)
+- [React Native documentation](https://reactnative.dev/)
+
+## 🤝 Join the community
+
+- [Expo on GitHub](https://github.com/expo/expo)
+- [Discord community](https://chat.expo.dev)

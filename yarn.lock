@@ -1217,6 +1217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo-google-fonts/sora@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@expo-google-fonts/sora@npm:0.4.1"
+  checksum: 7773299d112d6564b6c959743d62cbb30d72c2031f96a9ee3bd8c2032db0d9b02e13245ee69c55a0ef4e38b0ca83a6372b1822935d97248519a59f7c9369c000
+  languageName: node
+  linkType: hard
+
 "@expo/cli@npm:0.24.14":
   version: 0.24.14
   resolution: "@expo/cli@npm:0.24.14"
@@ -1896,6 +1903,17 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 2dd57bfd1ab452df355d17924e0b74173559d3322519dc869930d7ed04331eb2baec9477f127af3029f0fe8f6bcb7425cfdcdd12f169683c813a4d863956ae5c
+  languageName: node
+  linkType: hard
+
+"@react-native-async-storage/async-storage@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@react-native-async-storage/async-storage@npm:2.2.0"
+  dependencies:
+    merge-options: ^3.0.4
+  peerDependencies:
+    react-native: ^0.0.0-0 || >=0.65 <1.0
+  checksum: efbb9c801fb7eecfad1568d6a5e9d247db420b8ba8f1789d5b783e679432567a53cf54c7e7b5e6f315276f33d1df297253549e0cefef2e683539df346d2a1f2d
   languageName: node
   linkType: hard
 
@@ -3203,7 +3221,9 @@ __metadata:
   resolution: "boost-app@workspace:."
   dependencies:
     "@babel/core": ^7.25.2
+    "@expo-google-fonts/sora": ^0.4.1
     "@expo/vector-icons": ^14.1.0
+    "@react-native-async-storage/async-storage": ^2.2.0
     "@react-navigation/bottom-tabs": ^7.3.10
     "@react-navigation/elements": ^2.3.8
     "@react-navigation/native": ^7.1.6
@@ -3213,10 +3233,12 @@ __metadata:
     expo: ~53.0.11
     expo-blur: ~14.1.5
     expo-constants: ~17.1.6
-    expo-font: ~13.3.1
+    expo-font: ^13.3.1
     expo-haptics: ~14.1.4
     expo-image: ~2.3.0
+    expo-linear-gradient: ^14.1.5
     expo-linking: ~7.1.5
+    expo-navigation-bar: ^4.2.5
     expo-router: ~5.1.0
     expo-splash-screen: ~0.30.9
     expo-status-bar: ~2.2.3
@@ -3228,7 +3250,7 @@ __metadata:
     react-native: 0.79.3
     react-native-gesture-handler: ~2.24.0
     react-native-reanimated: ~3.17.4
-    react-native-safe-area-context: 5.4.0
+    react-native-safe-area-context: ^5.4.1
     react-native-screens: ~4.11.1
     react-native-web: ~0.20.0
     react-native-webview: 13.13.5
@@ -4556,7 +4578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-font@npm:~13.3.1":
+"expo-font@npm:^13.3.1, expo-font@npm:~13.3.1":
   version: 13.3.1
   resolution: "expo-font@npm:13.3.1"
   dependencies:
@@ -4602,6 +4624,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-linear-gradient@npm:^14.1.5":
+  version: 14.1.5
+  resolution: "expo-linear-gradient@npm:14.1.5"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 7550e1ff999fbe3da4a4b189a430fbadaeeffa98a2bfe5b4642a27dfdec73e7920e5a60e7db0c3bcc8345604841b4ea251cd5aa30c32d166d6ac2d86e00ecb58
+  languageName: node
+  linkType: hard
+
 "expo-linking@npm:~7.1.5":
   version: 7.1.5
   resolution: "expo-linking@npm:7.1.5"
@@ -4638,6 +4671,22 @@ __metadata:
   dependencies:
     invariant: ^2.2.4
   checksum: aebdf2e9eb39b4025967af923504af25e24d88ef175d930cbedcd829f79c8ce628d083bf00455e72a4c677310ccdb89859ff3e86ab0c63e2664279cb024868ed
+  languageName: node
+  linkType: hard
+
+"expo-navigation-bar@npm:^4.2.5":
+  version: 4.2.5
+  resolution: "expo-navigation-bar@npm:4.2.5"
+  dependencies:
+    "@react-native/normalize-colors": 0.79.3
+    debug: ^4.3.2
+    react-native-edge-to-edge: 1.6.0
+    react-native-is-edge-to-edge: ^1.1.6
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 5b8c470bacd21c250f3a7bb42312b2d709857271ef288caa48af27c0e6a96a66a1fdb806f75dbdaba60da52a1b45c2329dde53994957c47696f8d53d87220064
   languageName: node
   linkType: hard
 
@@ -5739,6 +5788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
+  languageName: node
+  linkType: hard
+
 "is-regex@npm:^1.2.1":
   version: 1.2.1
   resolution: "is-regex@npm:1.2.1"
@@ -6452,6 +6508,15 @@ __metadata:
   version: 6.0.0
   resolution: "memoize-one@npm:6.0.0"
   checksum: f185ea69f7cceae5d1cb596266dcffccf545e8e7b4106ec6aa93b71ab9d16460dd118ac8b12982c55f6d6322fcc1485de139df07eacffaae94888b9b3ad7675f
+  languageName: node
+  linkType: hard
+
+"merge-options@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "merge-options@npm:3.0.4"
+  dependencies:
+    is-plain-obj: ^2.1.0
+  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
   languageName: node
   linkType: hard
 
@@ -7710,13 +7775,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:5.4.0":
-  version: 5.4.0
-  resolution: "react-native-safe-area-context@npm:5.4.0"
+"react-native-safe-area-context@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "react-native-safe-area-context@npm:5.4.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 7d7f9a8278048650fd207d436798bd062d6f78d771cb0665b92aef69dba870251339e6812e1d669fd1958345288bd0f9ac98fbfe353c13958d18b58dc946c341
+  checksum: 695e2a46a988725ac7a948e2a0f52fa91dbf6cfd29e7fd8c4b9e511022279cc7530fcec5dc6430415dcb5d137c593c53dd88249d41d1e049a254c32421a12d44
   languageName: node
   linkType: hard
 

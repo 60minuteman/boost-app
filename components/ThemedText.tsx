@@ -1,5 +1,6 @@
 import { StyleSheet, Text, type TextProps } from 'react-native';
 
+import { ClashDisplay, Sora } from '@/constants/Typography';
 import { useThemeColor } from '@/hooks/useThemeColor';
 
 export type ThemedTextProps = TextProps & {
@@ -35,24 +36,27 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
+    fontFamily: Sora.Regular,
     fontSize: 16,
     lineHeight: 24,
   },
   defaultSemiBold: {
+    fontFamily: Sora.SemiBold,
     fontSize: 16,
     lineHeight: 24,
-    fontWeight: '600',
   },
   title: {
+    fontFamily: ClashDisplay.Bold,
     fontSize: 32,
-    fontWeight: 'bold',
-    lineHeight: 32,
+    lineHeight: 40,
   },
   subtitle: {
+    fontFamily: ClashDisplay.SemiBold,
     fontSize: 20,
-    fontWeight: 'bold',
+    lineHeight: 26,
   },
   link: {
+    fontFamily: Sora.Medium,
     lineHeight: 30,
     fontSize: 16,
     color: '#0a7ea4',
