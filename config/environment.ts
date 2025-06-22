@@ -19,6 +19,10 @@ export const ENV = {
   api: {
     baseUrl: 'https://generativelanguage.googleapis.com/v1beta',
     geminiModel: 'gemini-2.0-flash',
+    // Backend API - Conditional based on environment
+    backendUrl: __DEV__ 
+      ? 'http://localhost:3000/api/v1'  // Development
+      : 'https://boost-api.onrender.com/api/v1', // Production
   }
 };
 
