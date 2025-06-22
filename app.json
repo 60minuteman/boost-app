@@ -9,7 +9,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dreemlab.boostapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,9 +21,7 @@
         "backgroundColor": "#D9FF02"
       },
       "edgeToEdgeEnabled": true,
-      "navigationBar": {
-        "backgroundColor": "#000000"
-      }
+      "package": "com.dreemlab.boostapp"
     },
     "web": {
       "bundler": "metro",
@@ -36,10 +38,28 @@
           "resizeMode": "contain",
           "backgroundColor": "#D9FF02"
         }
-      ]
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#D9FF02",
+          "sounds": [],
+          "mode": "production"
+        }
+      ],
+      "expo-web-browser",
+      "expo-updates"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "44c8e30d-d187-4470-8dc2-eae1aa4f9987"
+      }
+    },
+    "owner": "dreemlab"
   }
 }
